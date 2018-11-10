@@ -8,7 +8,7 @@ const Home = (props) => (
         {
             <Group>
                 <ListItem>
-                    <Button size='l' stretched onClick={props.getGeoData(props.user, props.geodata)} >Start</Button>
+                    <Button size='l' stretched onClick={props.getGeoData} >Start</Button>
                 </ListItem>
             </Group>
         }
@@ -31,7 +31,6 @@ Home.propTypes = {
         lng: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     }),
     go: PropTypes.func.isRequired,
-    payFunc: PropTypes.func.isRequired,
     getGeoData: PropTypes.func.isRequired,
 };
 

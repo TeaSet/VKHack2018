@@ -36,7 +36,7 @@ class App extends React.Component {
         connect.send('VKWebAppGetUserInfo', {});
     }
 
-    getGeoData(user, geodata) {
+    getGeoData = () => {
 
         const xhr = new XMLHttpRequest();
         const url = "http://172.20.36.209/submit";
@@ -47,7 +47,8 @@ class App extends React.Component {
                 console.log("XHR finished");
             }
         };
-        const data = JSON.stringify({"user_id": "47895486", "lat": geodata.lat, "lng": geodata.lng, "time": "2018-11-11 15:35:04.179729"});
+        console.log(this)
+        const data = JSON.stringify({"user_id": this.state.fetchedUser, "lat": this.state.geodata.lat, "lng": this.state.geodata.lng, "time": "2018-11-11 15:35:04.179729"});
         xhr.send(data);
     }
 
