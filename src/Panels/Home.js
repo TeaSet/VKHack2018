@@ -34,6 +34,8 @@ Home.propTypes = {
     }),
     fetchedUser: PropTypes.shape({
         id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        first_name: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        last_name: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     }),
     go: PropTypes.func.isRequired,
     getGeoData: PropTypes.func.isRequired,
