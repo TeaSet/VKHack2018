@@ -40,13 +40,11 @@ class App extends React.Component {
         });
         connect.send('VKWebAppGetUserInfo', {});
         connect.send('VKWebAppGetGeodata', {});
-
     }
 
     getGeoData = () => {
-
         const xhr = new XMLHttpRequest();
-        const url = "http://172.20.36.209/submit";
+        const url = "https://bae32d60.ngrok.io/submit";
         xhr.open("POST", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onreadystatechange = function () {
