@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, Group, ListItem, PanelHeader, Button } from '@vkontakte/vkui';
+import { Panel, Group, ListItem, PanelHeader, Cell, Switch} from '@vkontakte/vkui';
 
 const Home = (props) => (
     <Panel id={props.id}>
@@ -8,7 +8,9 @@ const Home = (props) => (
         {
             <Group>
                 <ListItem>
-                    <Button size='l' stretched onClick={props.getGeoData} >Start</Button>
+                    <Cell asideContent={<Switch onClick={props.getGeoData}/>} >
+                        Activate Your Money Collector
+                    </Cell>
                 </ListItem>
             </Group>
         }
@@ -35,6 +37,7 @@ Home.propTypes = {
     }),
     go: PropTypes.func.isRequired,
     getGeoData: PropTypes.func.isRequired,
+    closeConnection: PropTypes.func.isRequired,
 };
 
 export default Home;
