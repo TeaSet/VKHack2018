@@ -54,7 +54,7 @@ class App extends React.Component {
     render() {
         return (
             <View activePanel={this.state.activePanel}>
-                <Home id="home" user={this.state.fetchedUser} geodata={this.state.geodata} getGeoData={this.getGeoData}/>
+                <Home id="home" user={this.state.fetchedUser}/>
             </View>
         );
     }
