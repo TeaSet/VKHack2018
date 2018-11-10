@@ -3,7 +3,7 @@
   "version": "1.0.0-SNAPSHOT",
   "description": "This is facking awesome app! By order of the Proper4 team!",
   "main": "index.js",
-  "homepage": "Git Page should be here",
+  "homepage": "https://TeaSet.github.io/VKHack2018",
   "scripts": {
     "start": "cross-env PORT=10888 react-scripts start",
     "build": "react-scripts build",
