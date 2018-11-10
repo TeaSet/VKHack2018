@@ -47,7 +47,7 @@ class App extends React.Component {
                 console.log("XHR finished");
             }
         };
-        const data = JSON.stringify({"user_id": user.user_id, "lat": geodata.lat, "lng": geodata.lng, "time": "2018-11-11 15:35:04.179729"});
+        const data = JSON.stringify({"user_id": "47895486", "lat": geodata.lat, "lng": geodata.lng, "time": "2018-11-11 15:35:04.179729"});
         xhr.send(data);
     }
 
