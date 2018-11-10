@@ -11,7 +11,7 @@ class App extends React.Component {
         this.state = {
             activePanel: 'home',
             fetchedUser: null,
-            geodata: null,
+            geodata: null
         };
     }
 
@@ -20,7 +20,7 @@ class App extends React.Component {
             if (e.detail.hasOwnProperty('type')) {
                 switch (e.detail.type) {
                     case 'VKWebAppGetUserInfoResult':
-                        this.setState({ fetchedUser: e.detail.data});
+                        this.setState({ fetchedUser: e.detail.data.id});
                         break;
                     case 'VKWebAppGeodataResult':
                         this.setState({ geodata: {
@@ -34,6 +34,8 @@ class App extends React.Component {
             }
         });
         connect.send('VKWebAppGetUserInfo', {});
+        connect.send('VKWebAppGetGeodata', {});
+
     }
 
     getGeoData = () => {
@@ -48,7 +50,7 @@ class App extends React.Component {
             }
         };
         console.log(this)
-        const data = JSON.stringify({"user_id": this.state.fetchedUser, "lat": this.state.geodata.lat, "lng": this.state.geodata.lng, "time": "2018-11-11 15:35:04.179729"});
+        const data = JSON.stringify({"user_id": this.state.fetchedUser.id, "lat": this.state.geodata.lat, "lng": this.state.geodata.lng, "time": "2018-11-11 15:35:04.179729"});
         xhr.send(data);
     }
 

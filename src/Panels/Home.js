@@ -30,6 +30,9 @@ Home.propTypes = {
         lat: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         lng: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     }),
+    fetchedUser: PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    }),
     go: PropTypes.func.isRequired,
     getGeoData: PropTypes.func.isRequired,
 };
