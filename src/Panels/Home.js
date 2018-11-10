@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Panel, Group, ListItem, PanelHeader, Button } from '@vkontakte/vkui';
-import Map from '../Components/Map';
 
 const Home = (props) => (
     <Panel id={props.id}>
@@ -13,7 +12,6 @@ const Home = (props) => (
                 </ListItem>
             </Group>
         }
-        <Map geodata={props.geodata}/>
     </Panel>
 );
 
