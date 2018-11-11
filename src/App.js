@@ -44,7 +44,7 @@ class App extends React.Component {
 
     getGeoData = () => {
         const xhr = new XMLHttpRequest();
-        const url = "https://615230d9.ngrok.io/submit";
+        const url = "http://172.20.36.209/submit";
         xhr.open("POST", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onreadystatechange = function () {
